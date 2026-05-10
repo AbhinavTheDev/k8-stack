@@ -1,0 +1,22 @@
+{
+  "name": "k8-stack",
+  "version": "1.0.0",
+  "description": "Instant tech stack generator",
+  "main": "index.js",
+  "bin": {
+    "k8-stack": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "nextjs",
+    "stack"
+  ],
+  "author": "AbhinavTheDev",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^14.0.3"
+  }
+}
