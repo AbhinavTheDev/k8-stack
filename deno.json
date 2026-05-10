@@ -1,0 +1,22 @@
+{
+  "name": "@abhinavthedev/k8-stack",
+  "version": "1.0.1",
+  "imports": {
+    "commander": "npm:commander@^14.0.3"
+  },
+  "exports": {
+    ".": "./src/mod.ts",
+    "./cli": "./src/cli.ts"
+  },
+  "publish": {
+    "exclude": [
+      "package.json",
+      "package-lock.json",
+      "node_modules",
+      ".gitignore",
+      "dist",
+      "tsconfig.json"
+    ]
+  },
+  "license": "MIT"
+}

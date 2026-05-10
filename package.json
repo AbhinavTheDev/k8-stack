@@ -1,13 +1,19 @@
 {
   "name": "k8-stack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Instant tech stack generator",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/mod.js",
+  "types": "./dist/mod.d.ts",
   "bin": {
-    "k8-stack": "./index.js"
+    "k8-stack": "./dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/cli.ts src/mod.ts --format esm --dts --clean",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "cli",
@@ -18,5 +24,10 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^14.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
   }
 }
